@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mason Staszel - Portfolio</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+        header {
+            text-align: center;
+            padding: 40px 0;
+            background-color: #00274c; /* University of Michigan Blue */
+            color: #ffcb05; /* University of Michigan Maize */
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        h1 { margin: 0; font-size: 2.5em; }
+        .contact-info { margin-top: 10px; font-size: 1.1em; color: #fff;}
+        .contact-info a { color: #ffcb05; text-decoration: none; }
+        section {
+            background: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h2 { color: #00274c; border-bottom: 2px solid #ffcb05; padding-bottom: 5px; }
+        h3 { color: #333; margin-bottom: 5px; }
+        .date { font-style: italic; color: #666; float: right; }
+        .skills-list { display: flex; flex-wrap: wrap; gap: 10px; list-style: none; padding: 0; }
+        .skills-list li { background: #e0e0e0; padding: 5px 10px; border-radius: 5px; font-size: 0.9em; }
+        .project-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .project-card { border: 1px solid #ccc; padding: 15px; border-radius: 5px; }
+        .visual-placeholder { background-color: #eaeaea; height: 150px; text-align: center; line-height: 150px; color: #888; margin-bottom: 15px; border-radius: 5px; border: 2px dashed #ccc;}
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Mason Staszel [cite: 1]</h1>
+    <div class="contact-info">
+        staszelm@umich.edu | (810) 623-3760 | Brighton, MI [cite: 2]<br>
+        <a href="https://www.linkedin.com/in/masonstaszel" target="_blank">linkedin.com/in/masonstaszel [cite: 2]</a>
+    </div>
+</header>
+
+<section>
+    <h2>Education [cite: 3]</h2>
+    <div>
+        <span class="date">Expected May 2027 [cite: 4]</span>
+        <h3>University of Michigan Ann Arbor College of Engineering [cite: 4]</h3>
+        <p>Computer Engineering BSE | Current GPA: 3.59 | Ann Arbor, MI [cite: 5]</p>
+        <ul>
+            <li><strong>Completed Coursework:</strong> Data Structures and Algorithms, Logic Design, Electronic Circuits, Calculus 3 & 4, Discrete Mathematics [cite: 6]</li>
+            <li><strong>Current Coursework:</strong> Computer Organization, Computer Security, Signals and Systems, Probabilistic Methods [cite: 7]</li>
+        </ul>
+    </div>
+    <hr style="border: 0; border-top: 1px solid #eee; margin: 15px 0;">
+    <div>
+        <span class="date">May 2024 [cite: 8]</span>
+        <h3>Brighton High School [cite: 8]</h3>
+        <p>GPA: 4.18/4.00 | Class Rank: 26/470 | Summa Cum Laude | Brighton, MI [cite: 9]</p>
+    </div>
+</section>
+
+<section>
+    <h2>Projects & Visual Deliverables [cite: 10]</h2>
+    <div class="project-grid">
+        
+        <div class="project-card">
+            <div class="visual-placeholder">[Insert Network Diagram or TrueNAS Screenshot Here]</div>
+            <span class="date">2020 - Present [cite: 11]</span>
+            <h3>Home Server and Networking Project [cite: 11]</h3>
+            <ul>
+                <li>Designed and deployed a home server environment using TrueNAS Scale and Docker/Portainer to manage network storage, run multiple virtual machines, and host various self-hosted services. [cite: 12]</li>
+                <li>Configured and managed applications such as an image and media server accessible remotely via Tailscale. [cite: 13]</li>
+                <li>Set up a local area network with Cisco network switches and access points. [cite: 14]</li>
+            </ul>
+        </div>
+
+        <div class="project-card">
+            <div class="visual-placeholder">[Insert Algorithm Graph or GitHub Link Here]</div>
+            <span class="date">Fall 2025 [cite: 15]</span>
+            <h3>Drone Pathfinding (C++) [cite: 15]</h3>
+            <ul>
+                <li>Designed a high-performance solution in C++ to the Traveling Salesman Problem. [cite: 16]</li>
+                <li>Implemented a Branch and Bound algorithm using a Minimum Spanning Tree pruning heuristic. [cite: 17]</li>
+            </ul>
+        </div>
+
+        <div class="project-card">
+            <div class="visual-placeholder">[Insert Code Snippet or Object File Flowchart Here]</div>
+            <span class="date">Winter 2026 [cite: 18]</span>
+            <h3>Assembler and Linker (C) [cite: 18]</h3>
+            <ul>
+                <li>Developed an assembler in C to parse and translate LC-2K assembly into machine-readable object files. [cite: 19]</li>
+                <li>Engineered a linker to resolve global symbols and relocate memory addresses, successfully combining multiple object files into a single executable. [cite: 20]</li>
+            </ul>
+        </div>
+
+        <div class="project-card">
+            <div class="visual-placeholder">[Insert Sandbox Screenshot or Payload Snippet Here]</div>
+            <span class="date">Winter 2026 [cite: 21]</span>
+            <h3>Web App Vulnerability Testing [cite: 21]</h3>
+            <ul>
+                <li>Exploited critical web application vulnerabilities (SQLi, XSS, CSRF) in a sandbox environment to demonstrate the mechanics of data exfiltration and account compromise. [cite: 22]</li>
+                <li>Extracted sensitive database records and bypassed authentication by engineering SQL injection payloads. [cite: 23]</li>
+                <li>Leveraged client-side vulnerabilities by crafting XSS payloads to extract sensitive session data and forging HTTP requests (CSRF) to execute unauthorized backend commands. [cite: 24]</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+<section>
+    <h2>Technical Skills [cite: 25]</h2>
+    <h3>Languages [cite: 26]</h3>
+    <ul class="skills-list">
+        <li>C/C++ [cite: 26]</li><li>MATLAB [cite: 26]</li><li>Verilog [cite: 26]</li><li>Java [cite: 26]</li><li>LaTeX [cite: 26]</li>
+    </ul>
+    <h3>Tools & Platforms [cite: 27]</h3>
+    <ul class="skills-list">
+        <li>Linux [cite: 27]</li><li>Git [cite: 27]</li><li>LTSpice [cite: 27]</li><li>Microsoft Office Suite [cite: 27]</li><li>TrueNAS Scale [cite: 27]</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Leadership & Work Experience [cite: 28, 33]</h2>
+    <div>
+        <span class="date">Fall 2012 - October 2023 [cite: 29]</span>
+        <h3>Eagle Scout | Boy Scouts of America [cite: 29]</h3>
+        <ul>
+            <li>Achieved highest rank in scouting after leading a service project totaling 100+ volunteer hours. [cite: 30]</li>
+            <li>Planned, budgeted, and executed a community renovation project, supervising a team of 10+ volunteers. [cite: 31]</li>
+            <li>Demonstrated long-term commitment and discipline by fulfilling merit and service requirements throughout 10+ years in Scouting. [cite: 32]</li>
+        </ul>
+    </div>
+    <hr style="border: 0; border-top: 1px solid #eee; margin: 15px 0;">
+    <div>
+        <span class="date">May 2022 – June 2024 [cite: 34]</span>
+        <h3>Lifeguard | Brighton High School [cite: 34, 35]</h3>
+        <ul>
+            <li>Supervised swimmers and enforced pool rules, ensuring a safe environment for 100+ people daily. [cite: 36]</li>
+            <li>Communicated effectively with patrons and co-workers to resolve issues calmly and professionally. [cite: 37]</li>
+        </ul>
+    </div>
+</section>
+
+</body>
+</html>
