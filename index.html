@@ -55,8 +55,23 @@
     h3 { color: #333; margin-bottom: 5px; }
     .date { font-style: italic; color: #666; float: right; }
     .skills-list { display: flex; flex-wrap: wrap; gap: 10px; list-style: none; padding: 0; }
-    .skills-list li { background: #e0e0e0; padding: 5px 10px; border-radius: 5px; font-size: 0.9em; }
+/* The base style for the skill badges, now with a transition */
+    .skills-list li { 
+        background: #e0e0e0; 
+        padding: 5px 10px; 
+        border-radius: 5px; 
+        font-size: 0.9em; 
+        transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+        cursor: default;
+    }
     
+    /* The hover effect for the skill badges */
+    .skills-list li:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+        background-color: #00274c; /* Turns University of Michigan Blue */
+        color: #ffcb05; /* Text turns Maize */
+    }    
     /* Updated Grid for variable sizes */
     .project-grid { 
         display: grid; 
