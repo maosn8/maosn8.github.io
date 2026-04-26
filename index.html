@@ -5,42 +5,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mason Staszel - Portfolio</title>
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f4f4f9;
-        }
-        header {
-            text-align: center;
-            padding: 40px 0;
-            background-color: #00274c; /* University of Michigan Blue */
-            color: #ffcb05; /* University of Michigan Maize */
-            border-radius: 8px;
-            margin-bottom: 20px;
-        }
-        h1 { margin: 0; font-size: 2.5em; }
-        .contact-info { margin-top: 10px; font-size: 1.1em; color: #fff;}
-        .contact-info a { color: #ffcb05; text-decoration: none; }
-        section {
-            background: #fff;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        h2 { color: #00274c; border-bottom: 2px solid #ffcb05; padding-bottom: 5px; }
-        h3 { color: #333; margin-bottom: 5px; }
-        .date { font-style: italic; color: #666; float: right; }
-        .skills-list { display: flex; flex-wrap: wrap; gap: 10px; list-style: none; padding: 0; }
-        .skills-list li { background: #e0e0e0; padding: 5px 10px; border-radius: 5px; font-size: 0.9em; }
-        .project-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-        .project-card { border: 1px solid #ccc; padding: 15px; border-radius: 5px; }
-        .visual-placeholder { background-color: #eaeaea; height: 150px; text-align: center; line-height: 150px; color: #888; margin-bottom: 15px; border-radius: 5px; border: 2px dashed #ccc;}
-    </style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f4f4f9;
+    }
+    
+    /* 1. Page Fade-In Animation */
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    header {
+        text-align: center;
+        padding: 40px 0;
+        background-color: #00274c; 
+        color: #ffcb05; 
+        border-radius: 8px;
+        margin-bottom: 20px;
+        animation: fadeIn 0.8s ease-out forwards;
+    }
+    h1 { margin: 0; font-size: 2.5em; }
+    .contact-info { margin-top: 10px; font-size: 1.1em; color: #fff;}
+    .contact-info a { color: #ffcb05; text-decoration: none; }
+    
+    section {
+        background: #fff;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        /* Apply fade-in to all sections */
+        opacity: 0;
+        animation: fadeIn 0.8s ease-out forwards;
+    }
+    
+    /* Stagger the section animations for a cool cascade effect */
+    section:nth-of-type(1) { animation-delay: 0.1s; }
+    section:nth-of-type(2) { animation-delay: 0.3s; }
+    section:nth-of-type(3) { animation-delay: 0.5s; }
+    section:nth-of-type(4) { animation-delay: 0.7s; }
+
+    h2 { color: #00274c; border-bottom: 2px solid #ffcb05; padding-bottom: 5px; }
+    h3 { color: #333; margin-bottom: 5px; }
+    .date { font-style: italic; color: #666; float: right; }
+    .skills-list { display: flex; flex-wrap: wrap; gap: 10px; list-style: none; padding: 0; }
+    .skills-list li { background: #e0e0e0; padding: 5px 10px; border-radius: 5px; font-size: 0.9em; }
+    
+    /* Updated Grid for variable sizes */
+    .project-grid { 
+        display: grid; 
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 20px; 
+    }
+    
+    /* 2. Hover Effects on Cards */
+    .project-card { 
+        border: 1px solid #ccc; 
+        padding: 15px; 
+        border-radius: 5px; 
+        background-color: #fff;
+        transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+    
+    .project-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        border-color: #00274c;
+    }
+
+    /* 3. The "Different Size" Class */
+    .featured-card {
+        grid-column: span 2;
+    }
+
+    .visual-placeholder { background-color: #eaeaea; height: 150px; text-align: center; line-height: 150px; color: #888; margin-bottom: 15px; border-radius: 5px; border: 2px dashed #ccc;}
+    
+    /* Responsive adjustment for mobile screens */
+    @media (max-width: 768px) {
+        .project-grid { grid-template-columns: 1fr; }
+        .featured-card { grid-column: span 1; }
+    }
+</style>
 </head>
 <body>
 
@@ -75,7 +126,7 @@
     <h2>Projects</h2>
     <div class="project-grid">
         
-        <div class="project-card">
+        <div class="project-card featured-card">
             <div class="visual-placeholder">[Insert Network Diagram or TrueNAS Screenshot Here]</div>
             <span class="date">2020 - Present</span>
             <h3>Home Server and Networking Project</h3>
