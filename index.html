@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mason Staszel - Portfolio</title>
+    <link rel="icon" type="image/png" href="favicon.png">
     <style>
+    html { scroll-behavior: smooth; }
     body {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         line-height: 1.6;
@@ -115,10 +117,19 @@
     <div class="contact-info">
         staszelm@umich.edu | (810) 623-3760 | Brighton, MI <br>
         <a href="https://www.linkedin.com/in/masonstaszel" target="_blank">linkedin.com/in/masonstaszel</a>
+        <div style="margin-top: 20px;">
+            <a href="resume.pdf" download style="background-color: #ffcb05; color: #00274c; padding: 10px 20px; text-decoration: none; font-weight: bold; border-radius: 5px; transition: background-color 0.3s ease;">📄 Download Resume (PDF)</a>
+        </div>
     </div>
 </header>
+<nav style="position: sticky; top: 0; background: #fff; padding: 10px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); border-radius: 8px; margin-bottom: 20px; z-index: 100;">
+    <a href="#education" style="margin: 0 15px; text-decoration: none; color: #00274c; font-weight: bold;">Education</a>
+    <a href="#projects" style="margin: 0 15px; text-decoration: none; color: #00274c; font-weight: bold;">Projects</a>
+    <a href="#skills" style="margin: 0 15px; text-decoration: none; color: #00274c; font-weight: bold;">Skills</a>
+    <a href="#experience" style="margin: 0 15px; text-decoration: none; color: #00274c; font-weight: bold;">Experience</a>
+</nav>
 
-<section>
+<section id="education">
     <h2>Education <span style="float: right; font-size: 14px; color: #666; text-transform: uppercase; letter-spacing: 1px;">Graduation</span></h2>
     <div style="clear: both; margin-top: 15px;">
         <span class="date">Expected May 2027</span>
@@ -137,7 +148,7 @@
     </div>
 </section>
 
-<section>
+<section id="projects">
     <h2>Projects</h2>
     <div class="project-grid">
         
@@ -182,7 +193,7 @@
     </div>
 </section>
 
-<section>
+<section id="skills">
     <h2>Technical Skills</h2>
     <h3>Languages</h3>
     <ul class="skills-list">
@@ -194,7 +205,7 @@
     </ul>
 </section>
 
-<section>
+<section id="experience">
     <h2>Leadership & Work Experience</h2>
     <div>
         <span class="date">Fall 2012 - October 2023</span>
