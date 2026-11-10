@@ -36,22 +36,20 @@
         animation: fadeIn 0.8s ease-out forwards;
     }
 
-        /* Clean, animated, floating navigation bar */
+    /* Clean, animated, floating navigation bar */
     nav {
         position: sticky;
-        top: 20px; /* Gives it breathing room so it floats below the top edge */
+        top: 20px;
         background: #fff;
         padding: 15px;
         text-align: center;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* Slightly softer shadow */
+        box-shadow: 0 4px 10px rgba(0,0,0,0.15);
         border-radius: 8px;
         margin-bottom: 20px;
         z-index: 100;
-        
-        /* The animation */
         opacity: 0;
         animation: fadeIn 0.8s ease-out forwards;
-        animation-delay: 0.2s; /* Slips in right after the main header */
+        animation-delay: 0.2s;
     }
 
     nav a {
@@ -63,8 +61,9 @@
     }
 
     nav a:hover {
-        color: #ffcb05; /* Text turns Maize when you hover over the links */
+        color: #ffcb05;
     }
+
     h1 { margin: 0; font-size: 2.5em; }
     .contact-info { margin-top: 10px; font-size: 1.1em; color: #fff;}
     .contact-info a { color: #ffcb05; text-decoration: none; }
@@ -75,12 +74,11 @@
         margin-bottom: 20px;
         border-radius: 8px;
         box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        /* Apply fade-in to all sections */
         opacity: 0;
         animation: fadeIn 0.8s ease-out forwards;
     }
     
-    /* Stagger the section animations for a cool cascade effect */
+    /* Stagger the section animations for a cascade effect */
     section:nth-of-type(1) { animation-delay: 0.1s; }
     section:nth-of-type(2) { animation-delay: 0.3s; }
     section:nth-of-type(3) { animation-delay: 0.5s; }
@@ -90,7 +88,7 @@
     h3 { color: #333; margin-bottom: 5px; }
     .date { font-style: italic; color: #666; float: right; }
     .skills-list { display: flex; flex-wrap: wrap; gap: 10px; list-style: none; padding: 0; }
-/* The base style for the skill badges, now with a transition */
+
     .skills-list li { 
         background: #e0e0e0; 
         padding: 5px 10px; 
@@ -100,21 +98,19 @@
         cursor: default;
     }
     
-    /* The hover effect for the skill badges */
     .skills-list li:hover {
         transform: translateY(-3px);
         box-shadow: 0 5px 10px rgba(0,0,0,0.15);
-        background-color: #00274c; /* Turns University of Michigan Blue */
-        color: #ffcb05; /* Text turns Maize */
+        background-color: #00274c;
+        color: #ffcb05;
     }    
-    /* Updated Grid for variable sizes */
+
     .project-grid { 
         display: grid; 
         grid-template-columns: repeat(2, 1fr); 
         gap: 20px; 
     }
     
-    /* 2. Hover Effects on Cards */
     .project-card { 
         border: 1px solid #ccc; 
         padding: 15px; 
@@ -129,14 +125,21 @@
         border-color: #00274c;
     }
 
-    /* 3. The "Different Size" Class */
     .featured-card {
         grid-column: span 2;
     }
 
-    .visual-placeholder { background-color: #eaeaea; height: 150px; text-align: center; line-height: 150px; color: #888; margin-bottom: 15px; border-radius: 5px; border: 2px dashed #ccc;}
+    .visual-placeholder { 
+        background-color: #eaeaea; 
+        height: 150px; 
+        text-align: center; 
+        line-height: 150px; 
+        color: #888; 
+        margin-bottom: 15px; 
+        border-radius: 5px; 
+        border: 2px dashed #ccc;
+    }
     
-    /* Responsive adjustment for mobile screens */
     @media (max-width: 768px) {
         .project-grid { grid-template-columns: 1fr; }
         .featured-card { grid-column: span 1; }
@@ -146,38 +149,84 @@
 <body>
 
 <header>
-    <h1>Mason Staszel </h1>
+    <h1>Mason Staszel</h1>
     <div class="contact-info">
-        staszelm@umich.edu | Metro Detroit <br>
+        staszelm@umich.edu | Metro Detroit<br>
         <a href="https://www.linkedin.com/in/masonstaszel" target="_blank">linkedin.com/in/masonstaszel</a>
         <div style="margin-top: 20px;">
-            <a href="mason-staszel-resume.pdf" download style="background-color: #ffcb05; color: #00274c; padding: 10px 20px; text-decoration: none; font-weight: bold; border-radius: 5px; transition: background-color 0.3s ease;">📄 Download Resume (PDF)</a>
+            <a href="mason-staszel-resume.pdf" download style="background-color: #ffcb05; color: #00274c; padding: 10px 20px; text-decoration: none; font-weight: bold; border-radius: 5px; transition: background-color 0.3s ease;">Download Resume (PDF)</a>
         </div>
     </div>
 </header>
+
 <nav>
     <a href="#education">Education</a>
-    <a href="#projects">Projects</a>
-    <a href="#experience">Experience</a>
     <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
 </nav>
 
 <section id="education">
     <h2>Education <span style="float: right; font-size: 14px; color: #666; text-transform: uppercase; letter-spacing: 1px;">Graduation</span></h2>
     <div style="clear: both; margin-top: 15px;">
         <span class="date">Expected May 2027</span>
-        <h3>University of Michigan Ann Arbor College of Engineering</h3>
-        <p>Computer Engineering BSE | Current GPA: 3.59 | Ann Arbor, MI</p>
+        <h3>University of Michigan | College of Engineering</h3>
+        <p>Bachelor of Science in Engineering (B.S.E.) in Computer Engineering | Current GPA: 3.62 | Ann Arbor, MI</p>
         <ul>
-            <li><strong>Completed Coursework:</strong> Data Structures and Algorithms, Computer Security, Electronic Circuits, Computer Organization, Signals and Systems, Probabilistic Methods, Logic Design</li>
-            <li><strong>Current Coursework:</strong> Computer Architecture, Computer Networks, Embedded Systems</li>
+            <li><strong>Relevant Coursework:</strong> Computer Architecture, Embedded Systems, Computer Networks, Data Structures & Algorithms, Computer Organization, Cybersecurity, Logic Design, Electronic Circuits, Signals & Systems.</li>
+            <li><strong>Planned (Winter 2027):</strong> Operating Systems, Advanced Embedded Systems.</li>
+        </ul>
+    </div>
+</section>
+
+<section id="skills">
+    <h2>Technical Skills</h2>
+    <h3>Languages</h3>
+    <ul class="skills-list">
+        <li>C/C++</li><li>Verilog/SystemVerilog</li><li>Python</li><li>Java</li><li>MATLAB</li><li>Bash/Shell</li><li>LaTeX</li>
+    </ul>
+    <h3>Hardware & Architectures</h3>
+    <ul class="skills-list">
+        <li>ARM Cortex-M4 (Infineon XMC4700)</li><li>RISC Architecture</li><li>FPGA</li><li>BIOS/UEFI Firmware</li><li>NUMA Tuning</li>
+    </ul>
+    <h3>Systems & Infrastructure</h3>
+    <ul class="skills-list">
+        <li>Linux/Unix</li><li>Docker</li><li>Portainer</li><li>TrueNAS Scale</li><li>Tailscale</li><li>Windows Server</li>
+    </ul>
+    <h3>Developer Tools & Test</h3>
+    <ul class="skills-list">
+        <li>Git/GitHub</li><li>llama.cpp</li><li>Claude Code</li><li>Wireshark</li><li>Logic Analyzers</li><li>Oscilloscopes</li><li>LTSpice</li>
+    </ul>
+</section>
+
+<section id="experience">
+    <h2>Leadership & Work Experience</h2>
+    <div>
+        <span class="date">May 2026 - August 2026</span>
+        <h3>Systems Engineering Intern | Rocket</h3>
+        <ul>
+            <li>Benchmarked and tuned on-premise CPU LLM inference using llama.cpp across multi-socket enterprise servers, configuring thread pinning, NUMA memory affinity, and GGUF quantization to optimize token throughput and reduce decode latency.</li>
+            <li>Migrated existing Windows setup scripts to configure a standardized Ubuntu development VM for macOS, maintaining corporate endpoint monitoring compliance across local developer machines.</li>
+            <li>Collaborated within an Agile engineering workflow, utilizing Azure DevOps (ADO) to track operational tasks and participating in standups to coordinate routine Windows Server update schedules and maintenance.</li>
         </ul>
     </div>
     <hr style="border: 0; border-top: 1px solid #eee; margin: 15px 0;">
+
     <div>
-        <span class="date">May 2024</span>
-        <h3>Brighton High School</h3>
-        <p>GPA: 4.18/4.00 | Class Rank: 26/470 | Summa Cum Laude | Brighton, MI</p>
+        <span class="date">October 2023</span>
+        <h3>Eagle Scout | Boy Scouts of America</h3>
+        <ul>
+            <li>Directed a community improvement renovation project; coordinated 10+ volunteers across 100+ cumulative service hours to deliver the project on time and within budget.</li>
+        </ul>
+    </div>
+    <hr style="border: 0; border-top: 1px solid #eee; margin: 15px 0;">
+
+    <div>
+        <span class="date">May 2022 – June 2024</span>
+        <h3>Lifeguard | Brighton High School Aquatics</h3>
+        <ul>
+            <li>Supervised community aquatic facility operations, enforced safety protocols for 100+ daily visitors, and resolved patron incidents calmly and professionally.</li>
+        </ul>
     </div>
 </section>
 
@@ -185,17 +234,52 @@
     <h2>Projects</h2>
     <div class="project-grid">
         
+        <!-- Project 1: Featured Homelab Infrastructure -->
         <div class="project-card featured-card">
-            <img src="truenas-screenshot.png" alt="Screenshot of TrueNAS dashboard" style="width: 100%; height: auto; border-radius: 5px; margin-bottom: 15px; border: 1px solid #ccc;">            <span class="date">2020 - Present</span>
-            <h3>Home Server and Networking Project</h3>
+            <img src="truenas-screenshot.png" alt="Screenshot of TrueNAS dashboard" style="width: 100%; height: auto; border-radius: 5px; margin-bottom: 15px; border: 1px solid #ccc;">
+            <span class="date">2020 - Present</span>
+            <h3>Home Server & Self-Hosted Infrastructure</h3>
             <ul>
-                <li>Designed and deployed a home server environment using TrueNAS Scale and Docker/Portainer to manage network storage, run multiple virtual machines, and host various self-hosted services.</li>
-                <li>Configured and managed applications such as an image and media server accessible remotely via Tailscale.</li>
-                <li>Set up a local area network with Cisco network switches and access points.</li>
+                <li>Maintained a 24/7 personal homelab server running TrueNAS Scale with 12 TB storage in a RAIDZ1 ZFS configuration, managing automated snapshot replication and data scrubbing.</li>
+                <li>Deployed 8+ containerized microservices via Docker and Portainer, establishing encrypted zero-trust remote access through a Tailscale mesh network without opening external firewall ports.</li>
+                <li>Set up local DNS routing and reverse proxy rules to manage internal hostnames, port mapping, and automatic SSL/TLS certificate renewal for hosted web interfaces.</li>
             </ul>
         </div>
+        
+        <!-- Project 2: Decoupled Superscalar Processor -->
         <div class="project-card">
-            <span class="date">Fall 2025</span>
+            <span class="date">Fall 2026 (In Progress)</span>
+            <h3>Decoupled Superscalar Processor</h3>
+            <ul>
+                <li>Collaborated in a 5-person team to architect and synthesize a 2-way superscalar processor, driving weekly development milestones through structured interface planning, architectural reviews, and technical progress reporting.</li>
+                <li>Co-developed the decoupled pipeline and micro-op queue through live team programming and continuous simulation checkpoints, coordinating module integration across frontend and backend stages to debug hazards and verify synthesized hardware correctness.</li>
+                <li>Triaged simulation failures alongside teammates by inspecting waveform traces and comparing cycle-by-cycle writeback logs against reference architectural models to isolate forwarding hazards and branch squash bugs.</li>
+            </ul>
+        </div>
+
+        <!-- Project 3: Adaptive Video Streaming CDN & Proxy -->
+        <div class="project-card">
+            <span class="date">Fall 2026</span>
+            <h3>Adaptive Video Streaming CDN & HTTP Proxy</h3>
+            <ul>
+                <li>Developed a multi-client HTTP proxy in C++ using select() I/O multiplexing to intercept MPEG-DASH video streams, parse XML manifest files (pugixml), and rewrite segment request URIs on-the-fly.</li>
+                <li>Estimated per-client throughput using an exponentially weighted moving average to dynamically select supported bitrates, and built a CDN load balancer implementing round-robin and shortest-path (Dijkstra) geographic server routing.</li>
+            </ul>
+        </div>
+
+        <!-- Project 4: Web Application Vulnerability Testing -->
+        <div class="project-card">
+            <span class="date">Winter 2026</span>
+            <h3>Web Application Vulnerability & Penetration Testing</h3>
+            <ul>
+                <li>Executed proof-of-concept exploits (SQLi, XSS, CSRF) within an isolated environment to demonstrate data exfiltration vectors, broken authentication, and unauthorized backend execution.</li>
+                <li>Authored Python scripts to automate payload delivery, evaluating session token leakage and validating backend input sanitization.</li>
+            </ul>
+        </div>
+
+        <!-- Project 5: Sequential Calculator -->
+        <div class="project-card">
+            <span class="date">Winter 2026</span>
             <h3>Sequential Calculator (Verilog)</h3>
             <ul>
                 <li>Designed and implemented a synchronous sequential calculator using Verilog, deploying the final design to an FPGA architecture.</li>
@@ -204,17 +288,7 @@
             </ul>
         </div>
 
-
-        <div class="project-card">
-            <span class="date">Winter 2026</span>
-            <h3>Assembler and Linker (C)</h3>
-            <ul>
-                <li>Developed an assembler in C to parse and translate LC-2K assembly into machine-readable object files.</li>
-                <li>Engineered a linker to resolve global symbols and relocate memory addresses, successfully combining multiple object files into a single executable.</li>
-            </ul>
-        </div>
-
-
+        <!-- Project 6: Drone Pathfinding -->
         <div class="project-card">
             <span class="date">Fall 2025</span>
             <h3>Drone Pathfinding (C++)</h3>
@@ -224,60 +298,17 @@
             </ul>
         </div>
 
+        <!-- Project 7: LC-2K Assembler and Linker -->
         <div class="project-card">
             <span class="date">Winter 2026</span>
-            <h3>Web App Vulnerability Testing</h3>
+            <h3>Assembler and Linker (C)</h3>
             <ul>
-                <li>Exploited critical web application vulnerabilities (SQLi, XSS, CSRF) in a sandbox environment to demonstrate the mechanics of data exfiltration and account compromise.</li>
-                <li>Extracted sensitive database records and bypassed authentication by engineering SQL injection payloads.</li>
-                <li>Leveraged client-side vulnerabilities by crafting XSS payloads to extract sensitive session data and forging HTTP requests (CSRF) to execute unauthorized backend commands.</li>
+                <li>Developed an assembler in C to parse and translate LC-2K assembly into machine-readable object files.</li>
+                <li>Engineered a linker to resolve global symbols and relocate memory addresses, successfully combining multiple object files into a single executable.</li>
             </ul>
         </div>
 
     </div>
-</section>
-
-<section id="experience">
-    <h2>Leadership & Work Experience</h2>
-    <div>
-        <span class="date">May 2026 – Aug 2026</span>
-        <h3>Systems Engineer Intern | Rocket</h3>
-        <ul>
-            <li>Coordinated the deployment and upgrading of Windows Server environments to ensure optimal system performance, security, and infrastructure reliability.</li>
-            <li>Leveraged artificial intelligence tools to automate technical workflows, optimize system engineering processes, and streamline daily operations.</li>
-        </ul>
-    </div>
-    <hr style="border: 0; border-top: 1px solid #eee; margin: 15px 0;">
-
-    <div>
-        <span class="date">Fall 2012 - October 2023</span>
-        <h3>Eagle Scout | Boy Scouts of America</h3>
-        <ul>
-            <li>Achieved highest rank in scouting after leading a service project totaling 100+ volunteer hours.</li>
-            <li>Planned, budgeted, and executed a community renovation project, supervising a team of 10+ volunteers.</li>
-        </ul>
-    </div>
-    <hr style="border: 0; border-top: 1px solid #eee; margin: 15px 0;">
-    <div>
-        <span class="date">May 2022 – June 2024</span>
-        <h3>Lifeguard | Brighton High School</h3>
-        <ul>
-            <li>Supervised swimmers and enforced pool rules, ensuring a safe environment for 100+ people daily.</li>
-            <li>Communicated effectively with patrons and co-workers to resolve issues calmly and professionally.</li>
-        </ul>
-    </div>
-</section>
-
-<section id="skills">
-    <h2>Technical Skills</h2>
-    <h3>Languages</h3>
-    <ul class="skills-list">
-        <li>C/C++</li><li>MATLAB</li><li>Verilog</li><li>Java</li><li>LaTeX</li>
-    </ul>
-    <h3>Tools & Platforms</h3>
-    <ul class="skills-list">
-        <li>Linux</li><li>Git/Github</li><li>LTSpice</li><li>Microsoft Office Suite</li><li>TrueNAS Scale</li>
-    </ul>
 </section>
 
 </body>
